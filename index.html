@@ -1,11 +1,635 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-Hi World
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Profile - Limjaewoo</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- services와 clusterer, drawing 라이브러리 불러오기 -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=Key&libraries=services,clusterer,drawing"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/aps/sdk.js?appkey=Key"></script>
+    <!-- jQuery library -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 
+    <script language="JavaScript">
+        <!--
+        $(document).ready(function() {
+            //사용할 배너
+            var $banner = $(".banner").find("ul");
+
+            var $bannerWidth = $banner.children().outerWidth();//배너 이미지의 폭
+            var $bannerHeight = $banner.children().outerHeight(); // 높이
+            var $bannerLength = $banner.children().length;//배너 이미지의 갯수
+            var rollingId;
+
+            //정해진 초마다 함수 실행
+            rollingId = setInterval(function() { rollingStart(); }, 3000);//다음 이미지로 롤링 애니메이션 할 시간차
+
+            //마우스 오버시 롤링을 멈춘다.
+            banner.mouseover(function(){
+                //중지
+                clearInterval(rollingId);
+                $(this).css("cursor", "pointer");
+            });
+            //마우스 아웃되면 다시 시작
+            banner.mouseout(function(){
+                rollingId = setInterval(function() { rollingStart(); }, 3000);
+                $(this).css("cursor", "default");
+            });
+
+            function rollingStart() {
+                $banner.css("width", $bannerWidth * $bannerLength + "px");
+                $banner.css("height", $bannerHeight + "px");
+                //alert(bannerHeight);
+                //배너의 좌측 위치를 옮겨 준다.
+                $banner.animate({left: - $bannerWidth + "px"}, 1500, function() { //숫자는 롤링 진행되는 시간이다.
+                    //첫번째 이미지를 마지막 끝에 복사(이동이 아니라 복사)해서 추가한다.
+                    $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
+                    //뒤로 복사된 첫번재 이미지는 필요 없으니 삭제한다.
+                    $(this).find("li:first").remove();
+                    //다음 움직임을 위해서 배너 좌측의 위치값을 초기화 한다.
+                    $(this).css("left", 0);
+                    //이 과정을 반복하면서 계속 롤링하는 배너를 만들 수 있다.
+                });
+            }
+        });
+        //-->
+    </script>
+</head>
+<body id="page-top">
+
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">Clarence Taylor</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul>
+            <div class="navbar-nav">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                <div class="nav_project">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Project">Project</a>
+                        <ul class="inner_ul" style="list-style-type: square;">
+                            <li><a class="nav-link js-scroll-trigger" href="#Project-Parking">Parking</a></li>
+                            <li><a class="nav-link js-scroll-trigger" href="#Project-HiddenC">HiddenC</a></li>
+                            <li><a class="nav-link js-scroll-trigger" href="#Project-Portfolio">Portfolio</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Board">Board</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Map">Map</a></li>
+            </div>
+            <div class="social-icons">
+<!--                {{#userName}}-->
+<!--                <br><br>-->
+<!--                <h5 style="color: black">Logged in as: <br><br><span id="user">{{userName}}</span></h5>-->
+<!--                <br>-->
+<!--                <a href="/logout" class="btn btn-info active" role="button">Logout</a>-->
+<!--                {{/userName}}-->
+<!--                {{^userName}}-->
+<!--                <br> <br> <br>-->
+<!--                <a href="/oauth2/authorization/google"-->
+<!--                   class="btn btn-success active" role="button">Google Login</a> <br><br>-->
+<!--                <a href="/oauth2/authorization/naver"-->
+<!--                   class="btn btn-secondary active"-->
+<!--                   role="button">Naver Login</a>-->
+<!--                {{/userName}}-->
+                <br><br><br>
+                <a class="social-icon" href="https://github.com/Limjaewoo-kor?tab=repositories"><i class="fab fa-github"></i></a>
+                </h3>
+            </div>
+        </ul>
+    </div>
+</nav>
+<!-- Page Content-->
+<div class="container-fluid p-0" style="background-color:aliceblue">
+    <!-- About-->
+    <section class="resume-section" id="about">
+        <div class="resume-section-content">
+            <h1 class="mb-0">
+                Web developer<br>
+                <span class="text-primary">Lim jae woo</span>
+            </h1>
+            <div class="subheading mb-5" style="margin-top: 50px;">
+                E-mail :
+                <a href="mailto:name@email.com">ljw3944@naver.com</a>
+            </div>
+            <p class="lead mb-5">안녕하세요.<br> 항상 새로움을 향해 도전하고 끊임없이 노력하는 임재우 입니다.</p>
+        </div>
+    </section>
+    <hr class="m-0" />
+
+    <!-- Skills-->
+    <section class="resume-section" id="skills">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Skills</h2>
+            <div class="subheading mb-3">Programming Languages & Tools</div>
+            <ul class="list-inline dev-icons">
+                <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                <li class="list-inline-item"><i class="fab fa-java"></i></li>
+                <li class="list-inline-item"><i class="fas fa-database"></i></li>
+                <li class="list-inline-item"><i class="fas fa-server"></i></li>
+                <li class="list-inline-item"><i class="fab fa-aws"></i></li>
+            </ul>
+            <div class="subheading mb-3">Experience</div>
+            <ul class="fa-ul mb-0">
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    HTML/CSS / 중 /<br>
+                    네이버 메인페이지 클론 코딩 및 개인 프로젝트를 제작.<br>
+                    공기업 사이트 유지보수팀으로 사이트의 화면 + Function 수정 <br>
+                    (Thymeleaf , Nexacro 플랫폼)<br>
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    Java / 중 /<br>
+                    Mybatis, Servlet/JSP, JDBC를 이용하여 개인 프로젝트 제작.<br>
+                    + JavaSpring(Maven)을 이용하여 팀 프로젝트 제작.<br>
+                    JPA, TDD, JavaSpringBoot(Gradle)을 이용하여 개인 프로젝트 제작.<br>
+                    공기업 사이트 유지보수팀으로 근무하며 Service,impl,controller,dao,xml(쿼리)파일등<br>
+                    오류 및 기능개선이 주 업무.<br>
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    Database / 중 /<br>
+                    MySQL을 이용하여, Web 개인프로젝트 및 팀 프로젝트를 제작.<br>
+                    MariaDB를 사용하여 Web 개인프로젝트를 제작.<br>
+                    공기업 사이트 유지보수팀으로 근무하며 Toad를 이용한 데이터 추가,삭제 및 변경<br>
+                    프로시저 생성 등의 업무<br>
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    Server / 중 /<br>
+                    Tomcat서버를 이용하여 개인 및 팀 프로젝트 제작.<br>
+                    Nginx 서버를 이용하여 개인 프로젝트 제작.<br>
+                    공기업 사이트 유지보수팀으로 근무하며 10개이상의 운영(WAS),파일업로드,연계서버의 <br>
+                    로그 체크 및 스케줄러 작동여부, 서버 재기동 등의 경험. <br>
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    CI/CD / 하 /<br>
+                    Codedeploy, IAM, S3버킷, Travis-CI를 이용하여, 지속적 통합,배포환경을 제작.<br>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <hr class="m-0" />
+
+    <!-- project-->
+    <section class="resume-section" id="Project">
+        <div class="resume-section-content"style=" margin-top: -35px;">
+            <h2 class="mb-5" style=" margin-top: -30px;">Project</h2>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <h3 class="mb-0"><a href="#Project-Parking">Parking</a></h3>
+                <div class="banner" style="margin-left: 140px">
+                    <ul class="banner_inner">
+                        <li><img src="https://user-images.githubusercontent.com/68491295/99076985-60737680-25ff-11eb-84e8-7f0dcae5faa0.png" style="width: 400px; height: 300px;"></li>
+                        <li><img src="https://user-images.githubusercontent.com/68491295/99077259-cbbd4880-25ff-11eb-8780-b1389cbe1104.png" style="width: 400px; height: 300px;"></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5" style=" margin-top: -45px;">
+                <h3 class="mb-0"><a href="#Project-HiddenC">HiddenC</a></h3>
+                <div class="banner" style="margin-right: 90px;">
+                    <ul class="banner_inner">
+                        <li><img src="https://user-images.githubusercontent.com/68491295/99079581-7edb7100-2603-11eb-90c1-12cae6d9778a.png" style="width: 400px; height: 300px;"></li>
+                        <li><img src="https://user-images.githubusercontent.com/68491295/99079614-89960600-2603-11eb-9d2c-a5b413814715.png" style="width: 400px; height: 300px;"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5" style=" margin-top: -45px;">
+                <h3 class="mb-0"><a href="#Project-Portfolio">Portfolio</a></h3>
+                <div class="banner" style="margin-left: 140px" >
+                    <ul class="banner_inner">
+                        <li><img src="https://user-images.githubusercontent.com/68491295/99688511-3c190d80-2ac9-11eb-9771-69fd8550e7e9.png" style="width: 400px; height: 300px;"></li>
+                        <li><img src="https://user-images.githubusercontent.com/68491295/99688516-3de2d100-2ac9-11eb-9fe4-51154b22d6a0.png" style="width: 400px; height: 300px;"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="m-0" />
+    <section class="resume-section" id="Project-Parking">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Project-Parking</h2>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Parking</h3>
+                    <div class="subheading mb-3">Explanation</div>
+                    <p>주차장 금액 정산 프로젝트는 Framework를 사용하지않고, 서블릿과 jsp만을 이용해서 만든 첫 개인 프로젝트.<br>
+                        정규식으로 차량번호를 확인하고, 입차시간과 출차시간을 체크하여, 분당 금액을 계산하여 결제하는 프로젝트를 제작.<br>
+                        관리자모드로는 과거 모든 입,출차로그와 분당 금액 및 정기권 금액을 변경할 수 있도록 제작.</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">2 weeks in August 2020</span></div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Issue </h3>
+                    <div class="subheading mb-3">3 issues</div>
+                    <p>
+                        1.입,출차가 진행되는중 처음으로 돌아와버리는 경우가 발생.<br>
+                        2.관리자 로그인 및 분당,정기권 금액 변경시에 금액이 초기금액으로 돌아오는 경우가 발생.<br>
+                        3.MVC - 초기에 MVC2패턴으로 제작하려한 프로젝트를 MVC1패턴으로 제작.<br>
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Solution</h3>
+                    <div class="subheading mb-3">3 solutions</div>
+                    <p>
+                        1.forward / redirect의 차이를 분명히 알기 위하여 구글링을 통해 관련 개념 및 예시를 공부 후 적용하여 해결.<br>
+                        2.scope의 범위에 대한 이해도가 부족하여 로그인 관련 예제를 공부하여 scope를 적용하여 해결.<br>
+                        3.프로젝트 후반부에 MVC2패턴에 대해 공부하여, 전체 다 갈아엎음으로서 해결.<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="m-0" />
+    <!-- project-->
+    <section class="resume-section" id="Project-HiddenC">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Project-HiddenC</h2>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">HiddenC</h3>
+                    <div class="subheading mb-3">Explanation</div>
+                    <p>숨은 카페 찾기 프로젝트는 SpringFramework를 사용하였으며, 프렌차이즈 외에 집주변 및 동네에 숨은 맛집 카페에 대한 정보를<br>
+                        공유하고자 만든 협업 프로젝트. 회원 가입 및 지도 기반 api를 통하여 카페 위치에 대한 정보를 제공하며, <br>
+                        카페 등록 및 삭제 회원 등급 설정, 회원 블락 및 언블락 및 쓴맛,신맛,원두 판매등 검색시 카테고리를 설정할 수 있도록 제작.</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">1 month in September 2020</span></div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Issue </h3>
+                    <div class="subheading mb-3">3 issues</div>
+                    <p>
+                        1.데이터 뻥튀기 : DB에서 여러 테이블에 특정 데이터들만 3번 Join하여 꺼내야 할 때, 같은 데이터가 중복되어 여러번 나오는 상황이 발생.<br>
+                        2.Admin,User 로그인 후 interceptor가 작동 해야 될 부분에 작동 하지 않는 상황 발생.<br>
+                        3.카페 등록시 등록자 마음대로 여러장의 사진을 업로드 한 후 다시 가져올 때 마지막에 들어 간 이미지 한장만 가져오는 상황 발생.<br>
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Solution</h3>
+                    <div class="subheading mb-3">3 solutions</div>
+                    <p>
+                        1.DTO를 새로 만들어서 하나의 DTO안에 다른 여러개의 DTO를 List화 시켜서 넣음으로써 해결.<br>
+                        2.Configuration에 InterceptorRegistry 관련 코드가 잘못 되어 수정 후 해결.<br>
+                        3.MultipartFile을 이용하여 이미지 저장시 DB에 기존 이름 + UUID로 새로운 이름을 부여해주고,
+                        넘겨줄때 경로로 넘겨주는걸로 해결. <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="m-0" />
+    <!-- project-->
+    <section class="resume-section" id="Project-Portfolio">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Project-Portfolio</h2>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Portfolio</h3>
+                    <div class="subheading mb-3">Explanation</div>
+                    <p>자기 소개 프로젝트는 본인의 자기소개를 위해 만든 페이지로, SpringBoot FrameWork 및 JPA, TDD를 사용하여 제작.<br>
+                        구글,네이버 로그인을 구현하였으며, AWS의 EC2서버, S3Management, Codedeploy, IAMManagement, Travis-ci등을 활용하여,
+                        자동 배포 및 무중단 배포를 구현. 개인 포트폴리오 및 이력을 계속 업데이트 할 예정.</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">Currently in progress</span></div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Issue </h3>
+                    <div class="subheading mb-3">2 issues</div>
+                    <p>
+                        1.TDD와 JPA라는걸 처음 적용 하다 보니 기술 자체 미숙한 상황 발생.<br>
+                        2.첫 배포 수행시 참고하던 자료들이 몇년전 자료이다보니 명령어 및 버전 관련 문제 발생.<br>
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Solution</h3>
+                    <div class="subheading mb-3">2 solutions</div>
+                    <p>
+                        1.동영상 강의 및 책과 인터넷 자료를 참고하여, TDD와  JPA에 대해서 공부.<br>
+                        2.여러 자료들을 참고하며 뭐가 무슨 역할을 하는지 뜯어내며, 바뀐 명령어 중 같은 기능을 하는 명령어들을 찾아내어 해결.<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="m-0" />
+
+    <!-- project-->
+    <section class="resume-section" id="Board">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Board</h2>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">문의 사항</h3>
+                    <div class="subheading mb-3">문의 사항 작성시 외부 로그인이 필요합니다.</div>
+                    <a href="/posts/save" role="button" class="btn btn-primary">등록</a>
+                </div>
+            </div>
+            <br>
+            <!-- 목록 출력 영역 -->
+            <table class="table table-horizontal table-bordered">
+                <thead class="thead-strong">
+
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>최종수정일</th>
+                </tr>
+                </thead>
+                <tbody id="today">
+                {{#posts}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td><a href="/posts/update/{{id}}"> {{title}} </a></td>
+                    <td>{{author}}</td>
+                    <td>{{modifiedDate}}</td>
+                </tr>
+                {{/posts}}
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+    <hr class="m-0" />
+
+    <!-- Map-->
+    <section class="resume-section" id="Map">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Map</h2>
+            <div class="subheading mb-3">Kakao.Map</div>
+
+            <div class="map_wrap">
+                <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+
+                <div id="menu_wrap" class="bg_white">
+                    <div class="option">
+                        <div>
+                            <form onsubmit="searchPlaces(); return false;">
+                                키워드 : <input type="text" value="안양역 맛집" id="keyword" size="15">
+                                <button type="submit">검색하기</button>
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <ul id="placesList"></ul>
+                    <div id="pagination"></div>
+                </div>
+            </div>
+
+
+            <script>
+                // 마커를 담을 배열입니다
+                var markers = [];
+
+                var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+                    mapOption = {
+                        center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+                        level: 3 // 지도의 확대 레벨
+                    };
+
+                // 지도를 생성합니다
+                var map = new kakao.maps.Map(mapContainer, mapOption);
+
+                // 장소 검색 객체를 생성합니다
+                var ps = new kakao.maps.services.Places();
+
+                // 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
+                var infowindow = new kakao.maps.InfoWindow({zIndex:1});
+
+                // 키워드로 장소를 검색합니다
+                searchPlaces();
+
+                // 키워드 검색을 요청하는 함수입니다
+                function searchPlaces() {
+
+                    var keyword = document.getElementById('keyword').value;
+
+                    if (!keyword.replace(/^\s+|\s+$/g, '')) {
+                        alert('키워드를 입력해주세요!');
+                        return false;
+                    }
+
+                    // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
+                    ps.keywordSearch( keyword, placesSearchCB);
+                }
+
+                // 장소검색이 완료됐을 때 호출되는 콜백함수 입니다
+                function placesSearchCB(data, status, pagination) {
+                    if (status === kakao.maps.services.Status.OK) {
+
+                        // 정상적으로 검색이 완료됐으면
+                        // 검색 목록과 마커를 표출합니다
+                        displayPlaces(data);
+
+                        // 페이지 번호를 표출합니다
+                        displayPagination(pagination);
+
+                    } else if (status === kakao.maps.services.Status.ZERO_RESULT) {
+
+                        alert('검색 결과가 존재하지 않습니다.');
+                        return;
+
+                    } else if (status === kakao.maps.services.Status.ERROR) {
+
+                        alert('검색 결과 중 오류가 발생했습니다.');
+                        return;
+
+                    }
+                }
+
+                // 검색 결과 목록과 마커를 표출하는 함수입니다
+                function displayPlaces(places) {
+
+                    var listEl = document.getElementById('placesList'),
+                        menuEl = document.getElementById('menu_wrap'),
+                        fragment = document.createDocumentFragment(),
+                        bounds = new kakao.maps.LatLngBounds(),
+                        listStr = '';
+
+                    // 검색 결과 목록에 추가된 항목들을 제거합니다
+                    removeAllChildNods(listEl);
+
+                    // 지도에 표시되고 있는 마커를 제거합니다
+                    removeMarker();
+
+                    for ( var i=0; i<places.length; i++ ) {
+
+                        // 마커를 생성하고 지도에 표시합니다
+                        var placePosition = new kakao.maps.LatLng(places[i].y, places[i].x),
+                            marker = addMarker(placePosition, i),
+                            itemEl = getListItem(i, places[i]); // 검색 결과 항목 Element를 생성합니다
+
+                        // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
+                        // LatLngBounds 객체에 좌표를 추가합니다
+                        bounds.extend(placePosition);
+
+                        // 마커와 검색결과 항목에 mouseover 했을때
+                        // 해당 장소에 인포윈도우에 장소명을 표시합니다
+                        // mouseout 했을 때는 인포윈도우를 닫습니다
+                        (function(marker, title) {
+                            kakao.maps.event.addListener(marker, 'mouseover', function() {
+                                displayInfowindow(marker, title);
+                            });
+
+                            kakao.maps.event.addListener(marker, 'mouseout', function() {
+                                infowindow.close();
+                            });
+
+                            itemEl.onmouseover =  function () {
+                                displayInfowindow(marker, title);
+                            };
+
+                            itemEl.onmouseout =  function () {
+                                infowindow.close();
+                            };
+                        })(marker, places[i].place_name);
+
+                        fragment.appendChild(itemEl);
+                    }
+
+                    // 검색결과 항목들을 검색결과 목록 Elemnet에 추가합니다
+                    listEl.appendChild(fragment);
+                    menuEl.scrollTop = 0;
+
+                    // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+                    map.setBounds(bounds);
+                }
+
+                // 검색결과 항목을 Element로 반환하는 함수입니다
+                function getListItem(index, places) {
+
+                    var el = document.createElement('li'),
+                        itemStr = '<span class="markerbg marker_' + (index+1) + '"></span>' +
+                            '<div class="info">' +
+                            '   <h5>' + places.place_name + '</h5>';
+
+                    if (places.road_address_name) {
+                        itemStr += '    <span>' + places.road_address_name + '</span>' +
+                            '   <span class="jibun gray">' +  places.address_name  + '</span>';
+                    } else {
+                        itemStr += '    <span>' +  places.address_name  + '</span>';
+                    }
+
+                    itemStr += '  <span class="tel">' + places.phone  + '</span>' +
+                        '</div>';
+
+                    el.innerHTML = itemStr;
+                    el.className = 'item';
+
+                    return el;
+                }
+
+                // 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
+                function addMarker(position, idx, title) {
+                    var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png', // 마커 이미지 url, 스프라이트 이미지를 씁니다
+                        imageSize = new kakao.maps.Size(36, 37),  // 마커 이미지의 크기
+                        imgOptions =  {
+                            spriteSize : new kakao.maps.Size(36, 691), // 스프라이트 이미지의 크기
+                            spriteOrigin : new kakao.maps.Point(0, (idx*46)+10), // 스프라이트 이미지 중 사용할 영역의 좌상단 좌표
+                            offset: new kakao.maps.Point(13, 37) // 마커 좌표에 일치시킬 이미지 내에서의 좌표
+                        },
+                        markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imgOptions),
+                        marker = new kakao.maps.Marker({
+                            position: position, // 마커의 위치
+                            image: markerImage
+                        });
+
+                    marker.setMap(map); // 지도 위에 마커를 표출합니다
+                    markers.push(marker);  // 배열에 생성된 마커를 추가합니다
+
+                    return marker;
+                }
+
+                // 지도 위에 표시되고 있는 마커를 모두 제거합니다
+                function removeMarker() {
+                    for ( var i = 0; i < markers.length; i++ ) {
+                        markers[i].setMap(null);
+                    }
+                    markers = [];
+                }
+
+                // 검색결과 목록 하단에 페이지번호를 표시는 함수입니다
+                function displayPagination(pagination) {
+                    var paginationEl = document.getElementById('pagination'),
+                        fragment = document.createDocumentFragment(),
+                        i;
+
+                    // 기존에 추가된 페이지번호를 삭제합니다
+                    while (paginationEl.hasChildNodes()) {
+                        paginationEl.removeChild (paginationEl.lastChild);
+                    }
+
+                    for (i=1; i<=pagination.last; i++) {
+                        var el = document.createElement('a');
+                        el.href = "#";
+                        el.innerHTML = i;
+
+                        if (i===pagination.current) {
+                            el.className = 'on';
+                        } else {
+                            el.onclick = (function(i) {
+                                return function() {
+                                    pagination.gotoPage(i);
+                                }
+                            })(i);
+                        }
+
+                        fragment.appendChild(el);
+                    }
+                    paginationEl.appendChild(fragment);
+                }
+
+                // 검색결과 목록 또는 마커를 클릭했을 때 호출되는 함수입니다
+                // 인포윈도우에 장소명을 표시합니다
+                function displayInfowindow(marker, title) {
+                    var content = '<div style="padding:5px;z-index:1;">' + title + '</div>';
+
+                    infowindow.setContent(content);
+                    infowindow.open(map, marker);
+                }
+
+                // 검색결과 목록의 자식 Element를 제거하는 함수입니다
+                function removeAllChildNods(el) {
+                    while (el.hasChildNodes()) {
+                        el.removeChild (el.lastChild);
+                    }
+                }
+            </script>
+        </div>
+    </section>
+    <hr class="m-0" />
+</div>
+<!-- Bootstrap core JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Third party plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
 </body>
 </html>
