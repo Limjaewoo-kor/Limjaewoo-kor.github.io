@@ -10155,3 +10155,5 @@ section.resume-section .resume-section-content {
     #pagination .on {font-weight: bold; cursor: default;color:#777;}
 
 }
+
+.myImg {    filter: grayscale(100%);}
