@@ -83,7 +83,7 @@
                 <div class="nav_project">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Project_1">Basic_project</a>
                         <ul class="inner_ul" style="list-style-type: square;">
-                            <li><a class="nav-link js-scroll-trigger" href="#Project-Parking">Parking</a></li>
+                            <li><a class="nav-link js-scroll-trigger" href="#Project-BoardGame">BoardGame</a></li>
                             <li><a class="nav-link js-scroll-trigger" href="#Project-HiddenC">HiddenC</a></li>
                             <li><a class="nav-link js-scroll-trigger" href="#ManagedWeb">Managed_Web</a></li>
                         </ul>
@@ -315,11 +315,13 @@
         <div class="resume-section-content"style=" margin-top: -35px;">
             <h2 class="mb-5" style=" margin-top: -30px;">Project</h2>
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                <h3 class="mb-0"><a href="#Project-Parking">Parking</a></h3>
+                <h3 class="mb-0"><a href="#Project-BoardGame">BoardGame</a></h3>
                 <div class="banner" style="margin-left: 140px">
                     <ul class="banner_inner">
-                        <li><img src="https://user-images.githubusercontent.com/68491295/99076985-60737680-25ff-11eb-84e8-7f0dcae5faa0.png" style="width: 400px; height: 300px;"></li>
-                        <li><img src="https://user-images.githubusercontent.com/68491295/99077259-cbbd4880-25ff-11eb-8780-b1389cbe1104.png" style="width: 400px; height: 300px;"></li>
+<!--                        <li><img src="https://user-images.githubusercontent.com/68491295/99076985-60737680-25ff-11eb-84e8-7f0dcae5faa0.png" style="width: 400px; height: 300px;"></li>-->
+<!--                        <li><img src="https://user-images.githubusercontent.com/68491295/99077259-cbbd4880-25ff-11eb-8780-b1389cbe1104.png" style="width: 400px; height: 300px;"></li>-->
+                        <li><img src="https://github.com/Limjaewoo-kor/boardGame_Pre/assets/68491295/345b4289-1b04-4f34-9912-70303912ecc2" style="width: 400px; height: 300px;"></li>
+                        <li><img src="https://github.com/Limjaewoo-kor/boardGame_Pre/assets/68491295/bbb9d823-db82-47a9-a69e-5b8f10aa0713" style="width: 400px; height: 300px;"></li>
                     </ul>
                 </div>
             </div>
@@ -348,37 +350,37 @@
         </div>
     </section>
     <hr class="m-0" />
-    <!-- Parking-->
-    <section class="resume-section" id="Project-Parking">
+    <!-- BoardGame-->
+    <section class="resume-section" id="Project-BoardGame">
         <div class="resume-section-content">
-            <h2 class="mb-5">Project-Parking</h2>
+            <h2 class="mb-5">Project-BoardGame</h2>
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                 <div class="flex-grow-1">
-                    <h3 class="mb-0">Parking</h3>
+                    <h3 class="mb-0">BoardGame</h3>
                     <div class="subheading mb-3">Explanation</div>
-                    <p>주차장 금액 정산 프로젝트는 SpringFramework를 사용하지않고, Servlet과 JSP를 이용해서 만든 첫 개인 프로젝트입니다.<br>
-                        정규식으로 차량번호를 확인하고, 입차시간과 출차시간을 체크하여 분당 금액을 계산하여 결제하는 프로젝트를 제작.<br>
-                        관리자모드로는 과거 모든 입,출차로그와 분당 금액 및 정기권 금액을 변경할 수 있도록 제작.</p>
+                    <p>SpringBoot / Oracle / Thymeleaf / mybatis / interceptor / loginSession <br>/ filter
+                        를 이용하여 보드 게임방의 관리자용 PC의 기능을 상상하여 구현.<br>
+                        관리자 기능 [회원가입/목록,게임추가/목록,음식추가/목록]<br>
+                        사용자 기능 [게임시작,음식주문,주문리스트]</p>
                 </div>
-                <div class="flex-shrink-0"><span class="text-primary">2 weeks in August 2020</span></div>
+                <div class="flex-shrink-0"><span class="text-primary">2 weeks in December 2023</span></div>
             </div>
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                 <div class="flex-grow-1">
                     <h3 class="mb-0">Issue </h3>
-                    <div class="subheading mb-3">2 issues</div>
+                    <div class="subheading mb-3">1 issues</div>
                     <p>
-                        1.입,출차가 진행되는중 처음으로 돌아와버리는 경우가 발생.<br>
-                        2.관리자 로그인 및 분당,정기권 금액 변경시에 금액이 초기금액으로 돌아오는 경우가 발생.<br>
+                        1. 프로젝트 진행 도중 MyBatis를 xmlConfig에서 javaConfig로 변경하는 과정에서 sql로깅이 적용 안되는 상황 발생. <br>
                     </p>
                 </div>
             </div>
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                 <div class="flex-grow-1">
                     <h3 class="mb-0">Solution</h3>
-                    <div class="subheading mb-3">3 solutions</div>
+                    <div class="subheading mb-3">1 solutions</div>
                     <p>
-                        1.forward / redirect의 차이를 분명히 알기 위하여 구글링을 통해 관련 개념 및 예시를 공부 후 적용하여 해결.<br>
-                        2.scope의 범위에 대한 이해도가 부족하여 관련 자료를 공부 후 적용하여 해결.<br>
+                        1. dataSource, context 외에 mybatis,sql logging 설정뿐만 아니라 RefreshableSqlSessionFactoryBean의 <br>
+                           내부 로직도 java Config로 알맞게 변경하여 해결. <br>
                     </p>
                 </div>
             </div>
@@ -519,7 +521,9 @@
                 <div class="flex-grow-1">
                     <h3 class="mb-0">Github_Blog</h3><br>
 <!--                    <div class="subheading mb-3">Explanation</div>-->
-                    <p>지속적으로 Github와 Blog를 관리중에 있습니다. <br>
+                    <p>지속적으로 Github와 Blog를 관리중에 있습니다. <br> <br>
+                    1. Github - <a href="https://github.com/Limjaewoo-kor" target='_blank'>Github_Link</a> <br>
+                    2. Blog - <a href="https://lcoding.tistory.com/" target='_blank'>Blog_Link</a>
                 </div>
             </div>
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
