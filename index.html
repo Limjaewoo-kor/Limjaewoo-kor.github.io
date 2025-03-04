@@ -553,12 +553,12 @@
           <p>
             1. 크롤링 - (네이버 검색 API 및 셀레니움 사용)<br>
             - 특정 주제를 검색하면 해당 검색어에 해당하는 상위 포스팅 글 3~5개 크롤링하여 DataBase에 저장.<br>
-            - 크롤링시 제목, 검색 키워드, 내용, 요약 내용("digit82/kobart-summarization"), 내용의 중요 키워드(KeyBERT(model="all-MiniLM-L6-v2")를 디비에 저장.<br>
+            - 크롤링시 제목, 검색 키워드, 내용, 요약 내용("digit82/kobart-summarization"),<br> 내용의 중요 키워드(KeyBERT(model="all-MiniLM-L6-v2")를 디비에 저장.<br>
             <br>
             2. 언어 모델을 이용한 AI글 생성 - (4가지 언어 모델(KoBART,LGAI-EXAONE,skt/kogpt2,kakaocorp/kanana))<br>
             - 저장된 글 리스트 화면에서 상세화면으로 진입시 해당 글에 대하여 1번에서 저장한 정보를 불러옴.<br>
-            -  화면에 제목, 요약내용, 중요키워드를 표출해주며 4가지 언어 모델(KoBART,LGAI-EXAONE,skt/kogpt2,kakaocorp/kanana)을 사용하여<br>
-            모델별로 각각 해당 주제에 대하여 글을 생성함.<br>
+            -  화면에 제목, 요약내용, 중요키워드를 표출해주며 4가지 언어 모델(KoBART,LGAI-EXAONE,skt/kogpt2,kakaocorp/kanana)을 <br>
+            사용하여 모델별로 각각 해당 주제에 대하여 글을 생성함.<br>
             -  부가기능 : 생성 글 복사 및 편집 기능)<br>
             <br>
             3. 특정 키워드의 트렌드 분석 - (네이버 트렌드 분석 API)<br>
