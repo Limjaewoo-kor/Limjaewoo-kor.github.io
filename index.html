@@ -20,48 +20,7 @@
   <!-- jQuery library -->
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 
-  <script language="JavaScript">
-    $(document).ready(function() {
-      //사용할 배너
-      var $banner = $(".banner").find("ul");
 
-      var $bannerWidth = $banner.children().outerWidth();//배너 이미지의 폭
-      var $bannerHeight = $banner.children().outerHeight(); // 높이
-      var $bannerLength = $banner.children().length;//배너 이미지의 갯수
-      var rollingId;
-
-      //정해진 초마다 함수 실행
-      rollingId = setInterval(function() { rollingStart(); }, 3000);//다음 이미지로 롤링 애니메이션 할 시간차
-
-      //마우스 오버시 롤링을 멈춘다.
-      banner.mouseover(function(){
-        //중지
-        clearInterval(rollingId);
-        $(this).css("cursor", "pointer");
-      });
-      //마우스 아웃되면 다시 시작
-      banner.mouseout(function(){
-        rollingId = setInterval(function() { rollingStart(); }, 3000);
-        $(this).css("cursor", "default");
-      });
-
-      function rollingStart() {
-        $banner.css("width", $bannerWidth * $bannerLength + "px");
-        $banner.css("height", $bannerHeight + "px");
-        //alert(bannerHeight);
-        //배너의 좌측 위치를 옮겨 준다.
-        $banner.animate({left: - $bannerWidth + "px"}, 1500, function() { //숫자는 롤링 진행되는 시간이다.
-          //첫번째 이미지를 마지막 끝에 복사(이동이 아니라 복사)해서 추가한다.
-          $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
-          //뒤로 복사된 첫번재 이미지는 필요 없으니 삭제한다.
-          $(this).find("li:first").remove();
-          //다음 움직임을 위해서 배너 좌측의 위치값을 초기화 한다.
-          $(this).css("left", 0);
-          //이 과정을 반복하면서 계속 롤링하는 배너를 만들 수 있다.
-        });
-      }
-    });
-  </script>
 </head>
 <body id="page-top">
 
@@ -93,24 +52,8 @@
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Project_2">Additional Notes</a>
           </li>
         </div>
-        <!--                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Board">Board</a></li>-->
-<!--        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Map">Kakao_Map</a></li>-->
-      </div>
+       </div>
       <div class="social-icons">
-        <!--                {{#userName}}-->
-        <!--                <br><br>-->
-        <!--                <h5 style="color: black">Logged in as: <br><br><span id="user">{{userName}}</span></h5>-->
-        <!--                <br>-->
-        <!--                <a href="/logout" class="btn btn-info active" role="button">Logout</a>-->
-        <!--                {{/userName}}-->
-        <!--                {{^userName}}-->
-        <!--                <br> <br> <br>-->
-        <!--                <a href="/oauth2/authorization/google"-->
-        <!--                   class="btn btn-success active" role="button">Google Login</a> <br><br>-->
-        <!--                <a href="/oauth2/authorization/naver"-->
-        <!--                   class="btn btn-secondary active"-->
-        <!--                   role="button">Naver Login</a>-->
-        <!--                {{/userName}}-->
         <br><br><br>
         <a class="social-icon" href="https://github.com/Limjaewoo-kor" target='_blank'><i class="fab fa-github"></i></a>
         </h3>
@@ -161,19 +104,21 @@
             끊임없이 새로운 도전을 즐기며 성장을 추구하는 <strong>AI 및 웹 개발자 임재우</strong>입니다.
           </p>
           <p>
-            현재 <strong>4년 차 웹 개발자</strong>로 Java, Spring Framework, Oracle 등 전통적인 웹 개발 환경에서 다양한 프로젝트를 수행해왔으며, 최근에는 <strong>AI와 LLM 기반의 웹 애플리케이션 개발</strong>에 큰 관심을 가지고 있습니다.
+            <strong>4년 차 웹 개발자</strong>로서 Java, Spring Framework, Oracle 기반의 전통적인 백엔드 시스템을 경험하며 기업 실무에 필요한 기술과 커뮤니케이션 역량을 쌓아왔습니다.
           </p>
           <p>
-            과거 웹 개발에서 얻은 Java 및 백엔드 개발 역량은 최근 <strong>FastAPI, LangChain, RAG 등 최신 AI 기술</strong>과 융합하여 새로운 서비스와 솔루션을 창출하는 데 활용하고 있습니다.
+            최근에는 <strong>AI 기술과 웹 개발을 융합한 서비스</strong>에 관심을 가지고, FastAPI, LangChain, RAG 등의 기술을 활용하여 사용자 친화적인 웹 애플리케이션을 직접 설계하고 구축하고 있습니다.
           </p>
           <p>
-            2024년 <strong>ADsP (데이터분석 준전문가)</strong>와 <strong>빅데이터분석기사</strong> 자격을 취득하여 데이터 분석 역량을 강화하였으며, 특히 <strong>자연어 처리(NLP), 음성 인식(STT, 다이어리제이션), 생성형 AI(LLM)</strong> 분야의 다양한 실무 프로젝트를 수행했습니다.
+            2024년에는 <strong>ADsP(데이터 분석 준전문가)</strong> 및 <strong>빅데이터분석기사</strong> 자격을 취득하여, 데이터 기반의 사고력과 분석 역량을 갖추었으며, <strong>자연어 처리(NLP), 음성 인식(STT), 생성형 AI(LLM)</strong> 관련 실무 프로젝트들을 수행한 경험이 있습니다.
           </p>
           <p>
-            개인적으로 운영 중인 <strong>Tistory 기술 블로그</strong>를 통해 학습 내용을 공유하고 있으며, Swift로 간단한 iOS 앱 두 가지를 직접 출시한 경험도 가지고 있습니다.
+            Swift를 활용한 <strong>iOS 앱 개발</strong>과 기술 블로그 운영을 통해 혼자서 서비스를 기획하고 완성하는 역량도 꾸준히 쌓고 있으며, 다양한 실험을 통해 성장 중입니다.
           </p>
           <p>
-            앞으로도 전통적인 웹 개발 경험과 최신 AI 기술의 융합을 통해 사용자의 삶에 가치를 제공할 수 있는 다양한 프로젝트를 만들어가고자 <strong> <a href="https://www.j-uni.com/" target="_blank">j-universe</a></strong>사이트를 제작중입니다.
+            앞으로도 <strong>전통적인 웹 기술과 최신 AI 기술의 융합</strong>을 통해, 사용자 중심의 서비스와 실질적인 가치를 만들어가는 개발자가 되고자 합니다.
+            현재는 이러한 목표를 실현하기 위해 <strong><a href="https://www.j-uni.com/" target="_blank">j-universe</a></strong>라는 플랫폼을 직접 기획·개발하고 있으며,
+            일상 속 문제를 AI로 해결하는 다양한 실험적 프로젝트를 운영 중입니다.
           </p>
         </section>
       </section>
@@ -474,8 +419,8 @@
         <h3 class="mb-0"><a href="#j_universe_AI">j_universe_AI&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a></h3>
         <div class="banner" style="margin-left: 140px" >
           <ul class="banner_inner">
-            <li><img src="https://github.com/user-attachments/assets/e0222c48-a66e-4148-8165-bb4ef99400c3" style="width: 400px; height: 300px;"></li>
-            <li><img src="https://github.com/user-attachments/assets/53e922d2-b8af-49c3-88c2-4754118ae2f1" style="width: 400px; height: 300px;"></li>
+            <li><img src="https://github.com/user-attachments/assets/e0222c48-a66e-4148-8165-bb4ef99400c3" style="width: 100%; max-width: 400px; height: 300px;" loading="lazy"></li>
+<!--            <li><img src="https://github.com/user-attachments/assets/53e922d2-b8af-49c3-88c2-4754118ae2f1" style="width: 100%; max-width: 400px; height: auto;" loading="lazy"></li>-->
           </ul>
         </div>
       </div>
@@ -483,8 +428,8 @@
         <h3 class="mb-0"><a href="#ManagedWeb">Managed_Web&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a></h3>
         <div class="banner" style="margin-left: 140px" >
           <ul class="banner_inner">
-            <li><img src="https://user-images.githubusercontent.com/68491295/284658211-250d8b0c-dad4-4daf-bbd0-2495b41ff251.png" style="width: 400px; height: 300px;"></li>
-            <li><img src="https://user-images.githubusercontent.com/68491295/284662016-f1c57c65-daad-4b72-9e36-3a51f2e38e3c.png" style="width: 400px; height: 300px;"></li>
+            <li><img src="https://user-images.githubusercontent.com/68491295/284658211-250d8b0c-dad4-4daf-bbd0-2495b41ff251.png" style="width: 100%; max-width: 400px; height: 300px;" loading="lazy"></li>
+<!--            <li><img src="https://user-images.githubusercontent.com/68491295/284662016-f1c57c65-daad-4b72-9e36-3a51f2e38e3c.png" style="width: 100%; max-width: 400px; height: auto;" loading="lazy"></li>-->
           </ul>
         </div>
       </div>
@@ -492,17 +437,18 @@
         <h3 class="mb-0"><a href="#Project-BoardGame">BoardGame&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a></h3>
         <div class="banner" style="margin-left: 170px">
           <ul class="banner_inner">
-            <li><img src="https://github.com/Limjaewoo-kor/boardGame_Pre/assets/68491295/fb1a0258-3f3d-44bc-a0c1-6d7ec6df6234" style="width: 400px; height: 300px;"></li>
-            <li><img src="https://github.com/Limjaewoo-kor/boardGame_Pre/assets/68491295/bbb9d823-db82-47a9-a69e-5b8f10aa0713" style="width: 400px; height: 300px;"></li>
+            <li><img src="https://github.com/Limjaewoo-kor/boardGame_Pre/assets/68491295/fb1a0258-3f3d-44bc-a0c1-6d7ec6df6234" style="width: 100%; max-width: 400px; height: 300px;" loading="lazy"></li>
+<!--            <li><img src="https://github.com/Limjaewoo-kor/boardGame_Pre/assets/68491295/bbb9d823-db82-47a9-a69e-5b8f10aa0713" style="width: 100%; max-width: 400px; height: auto;" loading="lazy"></li>-->
           </ul>
         </div>
       </div>
+      <br/>
       <div class="d-flex flex-column flex-md-row justify-content-between mb-5" style=" margin-top: -45px;">
         <h3 class="mb-0"><a href="#TrendKeywordFlow_AI">TrendKeywordFlow_AI</a></h3>
         <div class="banner" style="margin-left: 140px" >
           <ul class="banner_inner">
-            <li><img src="https://github.com/user-attachments/assets/98fa5b97-4282-4acb-a5d9-23fcb9af7ecd" style="width: 400px; height: 300px;"></li>
-            <li><img src="https://github.com/user-attachments/assets/0abbe24d-b764-4dca-81a6-6ed22a0e3547" style="width: 400px; height: 300px;"></li>
+<!--            <li><img src="https://github.com/user-attachments/assets/98fa5b97-4282-4acb-a5d9-23fcb9af7ecd" style="width: 100%; max-width: 400px; height: auto;" loading="lazy"></li>-->
+            <li><img src="https://github.com/user-attachments/assets/0abbe24d-b764-4dca-81a6-6ed22a0e3547" style="width: 100%; max-width: 400px; height: 300px;" loading="lazy"></li>
 
           </ul>
         </div>
@@ -521,7 +467,7 @@
           <h3 class="mb-0">프로젝트 개요</h3>
           <div class="subheading mb-3">Overview</div>
           <ul>
-            <li><a href="https://www.j-uni.com/" target="_blank">j-universe 사이트 바로가기</a></li>
+            <li><a href="https://www.j-uni.com/" target="_blank">J-universe 사이트 바로가기</a></li>
             <li><a href="https://github.com/Limjaewoo-kor/j_universe" target="_blank">Github 소스 바로가기</a></li>
           </ul>
           <p>
@@ -561,9 +507,9 @@
           <h4 class="mt-4">공통 기술 구성</h4>
           <ul>
             <li>FastAPI + LangChain 백엔드 / React 프론트엔드 / PostgreSQL DB</li>
-            <li>모바일 대응(반응형 CSS), PWA 지원(웹앱 설치 기능)</li>
+            <li>모바일 대응(반응형 CSS), PWA 적용(웹앱 설치 기능)</li>
             <li>Google Analytics 연동</li>
-            <li>Vercel(front) / Render(back) / Neon(DB)로 서비스 배포</li>
+            <li>Vercel[ front ] / Render -> Oracle Cloud Infrastructure(OCI)[ back ] / Neon[ DB ]로 서비스 배포</li>
           </ul>
         </div>
       </div>
@@ -575,6 +521,11 @@
           <div class="subheading mb-3">파라프레이즈(표현 다양성) 문제</div>
           <ul>
             <li>초기에는 유사한 의미의 다양한 질문 표현에 대해 LLM이 일관되지 못한 응답을 제공하는 문제가 있었습니다.</li>
+          </ul>
+          <div class="subheading mb-3 mt-3">백엔드 인프라 한계 및 비용 문제</div>
+          <ul>
+            <li>Render 무료 플랜에서 빈번한 슬립 현상 및 속도 지연, 리소스 제약으로 인해 실사용자 경험에 불편이 발생했습니다.</li>
+            <li>향후 확장성과 안정적인 운영을 위해 더 나은 인프라 환경으로 이전이 필요했습니다.</li>
           </ul>
         </div>
       </div>
@@ -588,6 +539,12 @@
             <li><strong>Few-shot Prompting:</strong> 다양한 예시 문장을 포함한 프롬프트 제공</li>
             <li><strong>Chunk 조정:</strong> chunk_size 및 chunk_overlap 최적화로 문맥 유지</li>
             <li><strong>Retriever 개선:</strong> Top-k 값 조정 및 relevance filter 적용</li>
+          </ul>
+          <div class="subheading mb-3 mt-4">인프라 개선 전략</div>
+          <ul>
+            <li><strong>백엔드 이전:</strong> Render 무료 플랜에서 발생하던 성능/슬립 이슈를 해결하기 위해 Oracle Cloud Infrastructure(OCI)의 Compute 인스턴스로 직접 배포 전환</li>
+            <li><strong>배포 방식 개선:</strong> DevOps 파이프라인 대신 수동 `.zip` 빌드 및 SSH 기반 직접 배포 방식 채택 → 배포 시간 단축 및 문제 발생 시 디버깅 용이</li>
+            <li><strong>도메인 연동 및 HTTPS 인증서 설정:</strong> Nginx 리버스 프록시 + Let's Encrypt 적용으로 사용자 도메인 환경에서도 안정적인 서비스 제공</li>
           </ul>
         </div>
       </div>
@@ -843,10 +800,9 @@
 
   <hr class="m-0" />
   <!-- TrendKeywordFlow_AI-->
-  <!-- TrendKeywordFlow_AI -->
   <section class="resume-section" id="TrendKeywordFlow_AI">
     <div class="resume-section-content">
-      <h2 class="mb-5">TrendKeywordFlow_AI</h2>
+      <h2 class="mb-5">TrendKeywordFlow_AI - 키워드 기반 콘텐츠 생성 자동화 플랫폼</h2>
 
       <!-- 프로젝트 개요 -->
       <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
@@ -944,8 +900,8 @@
         <h3 class="mb-0"><a href="#Result">Github/Blog</a></h3>
         <div class="banner" style="margin-left: 140px">
           <ul class="banner_inner">
-            <li><img src="https://user-images.githubusercontent.com/68491295/284657945-af408365-59bc-4993-a7f9-c48de7c08a62.png" style="width: 400px; height: 300px;"></li>
-            <li><img src="https://user-images.githubusercontent.com/68491295/284657967-fb4fcac6-318e-4a96-827a-9c294cc88eda.png" style="width: 400px; height: 300px;"></li>
+<!--            <li><img src="https://user-images.githubusercontent.com/68491295/284657945-af408365-59bc-4993-a7f9-c48de7c08a62.png" style="width: 100%; max-width: 400px; height: auto;" loading="lazy"></li>-->
+            <li><img src="https://user-images.githubusercontent.com/68491295/284657967-fb4fcac6-318e-4a96-827a-9c294cc88eda.png" style="width: 100%; max-width: 400px; height: 300px;" loading="lazy"></li>
           </ul>
         </div>
       </div>
@@ -954,8 +910,8 @@
         <h3 class="mb-0"><a href="#Result">Study</a></h3>
         <div class="banner" style="margin-left: 210px;">
           <ul class="banner_inner">
-            <li><img src="https://user-images.githubusercontent.com/68491295/284657974-5b65ef42-3047-405c-b0fb-4b4a495a0eff.png" style="width: 400px; height: 300px;"></li>
-            <li><img src="https://user-images.githubusercontent.com/68491295/284657987-5a154105-0951-493c-a27d-079f2aa320fd.png" style="width: 400px; height: 300px;"></li>
+            <li><img src="https://user-images.githubusercontent.com/68491295/284657974-5b65ef42-3047-405c-b0fb-4b4a495a0eff.png" style="width: 100%; max-width: 400px; height: 300px;" loading="lazy"></li>
+<!--            <li><img src="https://user-images.githubusercontent.com/68491295/284657987-5a154105-0951-493c-a27d-079f2aa320fd.png" style="width: 100%; max-width: 400px; height: auto;" loading="lazy"></li>-->
           </ul>
         </div>
       </div>
@@ -963,299 +919,14 @@
         <h3 class="mb-0"><a href="#Result">IOS_App</a></h3>
         <div class="banner" style="margin-left: 190px" >
           <ul class="banner_inner">
-            <li><img src="https://user-images.githubusercontent.com/68491295/284665817-2613b42d-3437-45a5-b990-f5c2b65a231f.png" style="width: 400px; height: 300px;"></li>
-            <li><img src="https://user-images.githubusercontent.com/68491295/284665829-6dd3009b-f6f4-4f60-8d0c-fbd75396d0c8.png" style="width: 400px; height: 300px;"></li>
+<!--            <li><img src="https://user-images.githubusercontent.com/68491295/284665817-2613b42d-3437-45a5-b990-f5c2b65a231f.png" style="width: 100%; max-width: 400px; height: auto;" loading="lazy"></li>-->
+            <li><img src="https://user-images.githubusercontent.com/68491295/284665829-6dd3009b-f6f4-4f60-8d0c-fbd75396d0c8.png" style="width: 100%; max-width: 400px; height: 300px;" loading="lazy"></li>
           </ul>
         </div>
       </div>
     </div>
   </section>
   <hr class="m-0" />
-  <!-- Result-->
-  <!--    &lt;!&ndash; Board&ndash;&gt;-->
-  <!--    <section class="resume-section" id="Board">-->
-  <!--        <div class="resume-section-content">-->
-  <!--            <h2 class="mb-5">Board</h2>-->
-  <!--            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">-->
-  <!--                <div class="flex-grow-1">-->
-  <!--                    <h3 class="mb-0">문의 사항</h3>-->
-  <!--                    <div class="subheading mb-3">문의 사항 작성시 외부 로그인이 필요합니다.</div>-->
-  <!--                    <a href="/posts/save" role="button" class="btn btn-primary">등록</a>-->
-  <!--                </div>-->
-  <!--            </div>-->
-  <!--            <br>-->
-  <!--            &lt;!&ndash; 목록 출력 영역 &ndash;&gt;-->
-  <!--            <table class="table table-horizontal table-bordered">-->
-  <!--                <thead class="thead-strong">-->
-
-  <!--                <tr>-->
-  <!--                    <th>번호</th>-->
-  <!--                    <th>제목</th>-->
-  <!--                    <th>작성자</th>-->
-  <!--                    <th>최종수정일</th>-->
-  <!--                </tr>-->
-  <!--                </thead>-->
-  <!--                <tbody id="today">-->
-  <!--                {{#posts}}-->
-  <!--                <tr>-->
-  <!--                    <td>{{id}}</td>-->
-  <!--                    <td><a href="/posts/update/{{id}}"> {{title}} </a></td>-->
-  <!--                    <td>{{author}}</td>-->
-  <!--                    <td>{{modifiedDate}}</td>-->
-  <!--                </tr>-->
-  <!--                {{/posts}}-->
-  <!--                </tbody>-->
-  <!--            </table>-->
-  <!--        </div>-->
-
-  <!--    </section>-->
-  <!--    <hr class="m-0" />-->
-
-  <!-- Map-->
-<!--  <section class="resume-section" id="Map">-->
-<!--    <div class="resume-section-content">-->
-<!--      <h2 class="mb-5">Map</h2>-->
-<!--      <div class="subheading mb-3">Kakao.Map</div>-->
-
-<!--      <div class="map_wrap">-->
-<!--        <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>-->
-
-<!--        <div id="menu_wrap" class="bg_white">-->
-<!--          <div class="option">-->
-<!--            <div>-->
-<!--              <form onsubmit="searchPlaces(); return false;">-->
-<!--                키워드 : <input type="text" value="안양역" id="keyword" size="15">-->
-<!--                <button type="submit">검색하기</button>-->
-<!--              </form>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <hr>-->
-<!--          <ul id="placesList"></ul>-->
-<!--         &lt;!&ndash; <div id="pagination"></div>&ndash;&gt;-->
-<!--        </div>-->
-<!--      </div>-->
-
-
-<!--      <script>-->
-<!--        // 마커를 담을 배열입니다-->
-<!--        var markers = [];-->
-
-<!--        var mapContainer = document.getElementById('map'), // 지도를 표시할 div-->
-<!--                mapOption = {-->
-<!--                  center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표-->
-<!--                  level: 3 // 지도의 확대 레벨-->
-<!--                };-->
-
-<!--        // 지도를 생성합니다-->
-<!--        var map = new kakao.maps.Map(mapContainer, mapOption);-->
-
-<!--        // 장소 검색 객체를 생성합니다-->
-<!--        var ps = new kakao.maps.services.Places();-->
-
-<!--        // 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다-->
-<!--        var infowindow = new kakao.maps.InfoWindow({zIndex:1});-->
-
-<!--        // 키워드로 장소를 검색합니다-->
-<!--        searchPlaces();-->
-
-<!--        // 키워드 검색을 요청하는 함수입니다-->
-<!--        function searchPlaces() {-->
-
-<!--          var keyword = document.getElementById('keyword').value;-->
-
-<!--          if (!keyword.replace(/^\s+|\s+$/g, '')) {-->
-<!--            alert('키워드를 입력해주세요!');-->
-<!--            return false;-->
-<!--          }-->
-
-<!--          // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다-->
-<!--          ps.keywordSearch( keyword, placesSearchCB);-->
-<!--        }-->
-
-<!--        // 장소검색이 완료됐을 때 호출되는 콜백함수 입니다-->
-<!--        function placesSearchCB(data, status, pagination) {-->
-<!--          if (status === kakao.maps.services.Status.OK) {-->
-
-<!--            // 정상적으로 검색이 완료됐으면-->
-<!--            // 검색 목록과 마커를 표출합니다-->
-<!--            displayPlaces(data);-->
-
-<!--            // 페이지 번호를 표출합니다-->
-<!--            displayPagination(pagination);-->
-
-<!--          } else if (status === kakao.maps.services.Status.ZERO_RESULT) {-->
-
-<!--            alert('검색 결과가 존재하지 않습니다.');-->
-<!--            return;-->
-
-<!--          } else if (status === kakao.maps.services.Status.ERROR) {-->
-
-<!--            alert('검색 결과 중 오류가 발생했습니다.');-->
-<!--            return;-->
-
-<!--          }-->
-<!--        }-->
-
-<!--        // 검색 결과 목록과 마커를 표출하는 함수입니다-->
-<!--        function displayPlaces(places) {-->
-
-<!--          var listEl = document.getElementById('placesList'),-->
-<!--                  menuEl = document.getElementById('menu_wrap'),-->
-<!--                  fragment = document.createDocumentFragment(),-->
-<!--                  bounds = new kakao.maps.LatLngBounds(),-->
-<!--                  listStr = '';-->
-
-<!--          // 검색 결과 목록에 추가된 항목들을 제거합니다-->
-<!--          removeAllChildNods(listEl);-->
-
-<!--          // 지도에 표시되고 있는 마커를 제거합니다-->
-<!--          removeMarker();-->
-
-<!--          for ( var i=0; i<places.length; i++ ) {-->
-
-<!--            // 마커를 생성하고 지도에 표시합니다-->
-<!--            var placePosition = new kakao.maps.LatLng(places[i].y, places[i].x),-->
-<!--                    marker = addMarker(placePosition, i),-->
-<!--                    itemEl = getListItem(i, places[i]); // 검색 결과 항목 Element를 생성합니다-->
-
-<!--            // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해-->
-<!--            // LatLngBounds 객체에 좌표를 추가합니다-->
-<!--            bounds.extend(placePosition);-->
-
-<!--            // 마커와 검색결과 항목에 mouseover 했을때-->
-<!--            // 해당 장소에 인포윈도우에 장소명을 표시합니다-->
-<!--            // mouseout 했을 때는 인포윈도우를 닫습니다-->
-<!--            (function(marker, title) {-->
-<!--              kakao.maps.event.addListener(marker, 'mouseover', function() {-->
-<!--                displayInfowindow(marker, title);-->
-<!--              });-->
-
-<!--              kakao.maps.event.addListener(marker, 'mouseout', function() {-->
-<!--                infowindow.close();-->
-<!--              });-->
-
-<!--              itemEl.onmouseover =  function () {-->
-<!--                displayInfowindow(marker, title);-->
-<!--              };-->
-
-<!--              itemEl.onmouseout =  function () {-->
-<!--                infowindow.close();-->
-<!--              };-->
-<!--            })(marker, places[i].place_name);-->
-
-<!--            fragment.appendChild(itemEl);-->
-<!--          }-->
-
-<!--          // 검색결과 항목들을 검색결과 목록 Elemnet에 추가합니다-->
-<!--          listEl.appendChild(fragment);-->
-<!--          menuEl.scrollTop = 0;-->
-
-<!--          // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다-->
-<!--          map.setBounds(bounds);-->
-<!--        }-->
-
-<!--        // 검색결과 항목을 Element로 반환하는 함수입니다-->
-<!--        function getListItem(index, places) {-->
-
-<!--          var el = document.createElement('li'),-->
-<!--                  itemStr = '<span class="markerbg marker_' + (index+1) + '"></span>' +-->
-<!--                          '<div class="info">' +-->
-<!--                          '   <h5>' + places.place_name + '</h5>';-->
-
-<!--          if (places.road_address_name) {-->
-<!--            itemStr += '    <span>' + places.road_address_name + '</span>' +-->
-<!--                    '   <span class="jibun gray">' +  places.address_name  + '</span>';-->
-<!--          } else {-->
-<!--            itemStr += '    <span>' +  places.address_name  + '</span>';-->
-<!--          }-->
-
-<!--          itemStr += '  <span class="tel">' + places.phone  + '</span>' +-->
-<!--                  '</div>';-->
-
-<!--          el.innerHTML = itemStr;-->
-<!--          el.className = 'item';-->
-
-<!--          return el;-->
-<!--        }-->
-
-<!--        // 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다-->
-<!--        function addMarker(position, idx, title) {-->
-<!--          var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png', // 마커 이미지 url, 스프라이트 이미지를 씁니다-->
-<!--                  imageSize = new kakao.maps.Size(36, 37),  // 마커 이미지의 크기-->
-<!--                  imgOptions =  {-->
-<!--                    spriteSize : new kakao.maps.Size(36, 691), // 스프라이트 이미지의 크기-->
-<!--                    spriteOrigin : new kakao.maps.Point(0, (idx*46)+10), // 스프라이트 이미지 중 사용할 영역의 좌상단 좌표-->
-<!--                    offset: new kakao.maps.Point(13, 37) // 마커 좌표에 일치시킬 이미지 내에서의 좌표-->
-<!--                  },-->
-<!--                  markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imgOptions),-->
-<!--                  marker = new kakao.maps.Marker({-->
-<!--                    position: position, // 마커의 위치-->
-<!--                    image: markerImage-->
-<!--                  });-->
-
-<!--          marker.setMap(map); // 지도 위에 마커를 표출합니다-->
-<!--          markers.push(marker);  // 배열에 생성된 마커를 추가합니다-->
-
-<!--          return marker;-->
-<!--        }-->
-
-<!--        // 지도 위에 표시되고 있는 마커를 모두 제거합니다-->
-<!--        function removeMarker() {-->
-<!--          for ( var i = 0; i < markers.length; i++ ) {-->
-<!--            markers[i].setMap(null);-->
-<!--          }-->
-<!--          markers = [];-->
-<!--        }-->
-
-<!--        // 검색결과 목록 하단에 페이지번호를 표시는 함수입니다-->
-<!--        function displayPagination(pagination) {-->
-<!--          var paginationEl = document.getElementById('pagination'),-->
-<!--                  fragment = document.createDocumentFragment(),-->
-<!--                  i;-->
-
-<!--          // 기존에 추가된 페이지번호를 삭제합니다-->
-<!--          while (paginationEl.hasChildNodes()) {-->
-<!--            paginationEl.removeChild (paginationEl.lastChild);-->
-<!--          }-->
-
-<!--          for (i=1; i<=pagination.last; i++) {-->
-<!--            var el = document.createElement('a');-->
-<!--            el.href = "#";-->
-<!--            el.innerHTML = i;-->
-
-<!--            if (i===pagination.current) {-->
-<!--              el.className = 'on';-->
-<!--            } else {-->
-<!--              el.onclick = (function(i) {-->
-<!--                return function() {-->
-<!--                  pagination.gotoPage(i);-->
-<!--                }-->
-<!--              })(i);-->
-<!--            }-->
-
-<!--            fragment.appendChild(el);-->
-<!--          }-->
-<!--          paginationEl.appendChild(fragment);-->
-<!--        }-->
-
-<!--        // 검색결과 목록 또는 마커를 클릭했을 때 호출되는 함수입니다-->
-<!--        // 인포윈도우에 장소명을 표시합니다-->
-<!--        function displayInfowindow(marker, title) {-->
-<!--          var content = '<div style="padding:5px;z-index:1;">' + title + '</div>';-->
-
-<!--          infowindow.setContent(content);-->
-<!--          infowindow.open(map, marker);-->
-<!--        }-->
-
-<!--        // 검색결과 목록의 자식 Element를 제거하는 함수입니다-->
-<!--        function removeAllChildNods(el) {-->
-<!--          while (el.hasChildNodes()) {-->
-<!--            el.removeChild (el.lastChild);-->
-<!--          }-->
-<!--        }-->
-<!--      </script>-->
-<!--    </div>-->
-<!--  </section>-->
   <hr class="m-0" />
 </div>
 <!-- Bootstrap core JS-->
