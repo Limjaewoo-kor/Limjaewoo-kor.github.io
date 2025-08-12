@@ -351,17 +351,22 @@
           <ul>
             <li><strong>Python 기반 데이터 분석 및 머신러닝:</strong> Pandas, Numpy, Sklearn, Scipy 등 활용</li>
             <li><strong>딥러닝 실습 환경:</strong> Colab, Jupyter Notebook, TensorFlow, PyTorch (CUDA 최적화)</li>
-            <li><strong>LLM 모델 활용 및 실습:</strong> KoBART, LGAI-EXAONE, SKT KoGPT2, Kakao KANANA 등 한국어 특화 모델</li>
-            <li><strong>RAG 및 LLM 경험:</strong> PDF, XLS, TXT 등 다양한 문서를 Chroma 벡터 DB를 활용하여 벡터화하고 GPT API 연동</li>
-            <li><strong>Prompt Engineering 경험:</strong> 퓨샷 및 Chunk 최적화를 통한 문제해결 능력 강화</li>
-            <li><strong>LangChain 기반 문서 검색 및 웹 툴 통합:</strong> 웹 검색 및 QA 시스템 설계 및 구축</li>
-            <li><strong>PWA 기반 AI 웹앱 개발 경험:</strong> 반응형 및 모바일 최적화 경험</li>
-            <li><strong>화자 분리 및 음성 인식 실습:</strong> Whisper / WhisperX, Pyannote.audio 기반 STT 및 다이어리제이션 실습</li>
-            <li><strong>RAG 프로젝트:</strong> <a href="https://www.j-uni.com/chat" target="_blank"> 사이트 바로가기</a></li>
-            <li><strong>CrewAI 기반 LLM 멀티에이전트 설계:</strong> Generator, Validator, Formatter 에이전트로 구성된 다단계 문제 생성/검증 파이프라인 구현. 난이도 강제, 중복 방지, JSON 포맷팅 등 품질 관리 로직 설계 및 로그 기반 품질 모니터링</li>
-            <li><strong>실서비스 수준 LLM 프로젝트 운영:</strong> 말해조, 럼블챗봇, 계산해, 두뇌트레이너 등 FastAPI + GPT 기반 AI 웹 서비스 개발 및 배포. 사용자 인증·비인증 구분, 호출 횟수 제한, 데이터베이스 연동 등 상용 서비스 수준의 운영 기능 구현</li>
-
+            <li><strong>LLM 모델 활용 및 실습:</strong> GPT를 이용한 한국어·다국어 모델 실서비스 적용</li>
+            <li><strong>RAG 및 LLM 경험:</strong> PDF, XLS, TXT 등 다양한 문서를 Chroma 벡터 DB로 벡터화하여 GPT API와 연동, Top-k 및 필터링 최적화</li>
+            <li><strong>Prompt Engineering 경험:</strong> 퓨샷, Chunk 최적화, 멀티턴 컨텍스트 관리, 조건부 프롬프트 설계</li>
+            <li><strong>LangChain 기반 문서 검색 및 웹 툴 통합:</strong> 웹 검색 및 QA 시스템 설계·구축</li>
+            <li><strong>데스크톱 앱 개발 경험:</strong> PyQt 기반 UI, Tesseract OCR 내장, 반투명 오버레이 캡처 및 번역 기능 구현</li>
+            <li><strong>LLM 비용 최적화:</strong> DB 문제 혼합 출제, 중복 방지 로직, 불필요한 GPT 호출 최소화 구조 설계</li>
+            <li><strong>CrewAI 기반 LLM 멀티에이전트 설계:</strong> Generator, Validator, Formatter 에이전트로 구성된 다단계 문제 생성·검증 파이프라인 구현 및 로그 기반 품질 모니터링</li>
+            <li><strong>실서비스 수준 LLM 프로젝트 운영:</strong> 말해조, 럼블챗봇, 계산해, 두뇌트레이너, 스크린 번역기 등 FastAPI + GPT 기반 서비스 개발 및 배포, 사용자 인증·비인증 구분, 호출 횟수 제한, UUID 기반 비회원 이력 관리</li>
           </ul>
+          <br/>
+          <strong>기타 실습 경험</strong>
+          <ul>
+            <li>화자 분리 및 음성 인식 실습: Whisper / WhisperX, Pyannote.audio 기반 STT 및 다이어리제이션</li>
+            <li>다양한 오픈소스 LLM 모델 실험: KoBART, Kakao KANANA, SKT KoGPT2, LGAI-EXAONE 등 로컬·클라우드 환경 배포 테스트</li>
+          </ul>
+        </li>
       </ul>
       <br>
     </div>
@@ -427,8 +432,10 @@
             <li><a href="https://www.j-uni.com/" target="_blank">J-universe 사이트 바로가기</a></li>
           </ul>
           <p>
-            j_universe_AI는 LLM 기술을 활용하여 다양한 실생활 문제를 해결하는 웹 애플리케이션 프로젝트 모음입니다. <br/>
-            모든 프로젝트는 FastAPI 기반 백엔드와 React 기반 프론트엔드로 구성되었으며, PostgreSQL DB 및 LangChain 기반의 AI 기능을 중심으로 개발되었습니다.
+            j_universe_AI는 LLM과 다양한 AI 기술을 활용하여 실생활의 다양한 문제를 해결하는 웹·데스크톱 애플리케이션 프로젝트 모음입니다. <br/>
+            모든 프로젝트는 FastAPI 기반 백엔드와 React 기반 프론트엔드(데스크톱 앱의 경우 PyQt)로 구성되었으며, PostgreSQL DB, LangChain, 멀티에이전트 구조,
+            하이브리드 번역 엔진 등을 핵심 기술로 적용하였습니다. <br/>
+            서비스는 웹(PWA 지원)과 앱 그리고 로컬 PC 환경 모두에서 안정적으로 동작하도록 설계되었습니다.
           </p>
         </div>
         <div class="flex-shrink-0"><span class="text-primary">Currently in progress</span></div>
@@ -443,23 +450,20 @@
               <ul>
                 <li>사용자가 핵심 내용을 입력하면, 정중하고 공손한 비즈니스 문장 또는 민원 문서를 자동으로 생성해주는 AI 문장 생성 도우미입니다.</li>
                 <li>GPT 기반 자연어 생성 기술을 활용하여 한국어의 높임말, 맞춤법, 상황별 표현 등을 정교하게 적용합니다.</li>
+                <li>상황별 템플릿과 프롬프트 최적화를 통해 재사용성을 높이고, LLM 호출 비용을 절감하였습니다.</li>
+                <li>생성 결과를 즉시 복사할 수 있는 UI를 제공하며, 사용자가 톤(격식/일상)을 실시간 변경할 수 있도록 구현하였습니다.</li>
               </ul>
             </li>
             <br />
-            <li><strong>2. Rumble Guide Chatbot</strong>
-              <ul>
-                <li>디지몬 슈퍼럼블 게임의 가이드를 위한 LLM 기반 챗봇으로, OpenAI API + LangChain + RAG + Chroma를 활용하여 캐릭터 정보, 공략, 추천 세팅 등의 질문에 실시간 대응합니다.</li>
-              </ul>
-            </li>
-            <br />
-            <li><strong>3. 계산해 (말로 계산하는 AI 계산기)</strong>
+            <li><strong>2. 계산해 (말로 계산하는 AI 계산기)</strong>
               <ul>
                 <li>사용자가 자연어로 입력한 계산 요청(예: "23500원을 30% 할인한 금액을 알려줘")을 이해하고 숫자로 변환하여 계산해주는 AI 계산기입니다.</li>
                 <li>기본 계산 외에도 이자 계산기, 환율 계산기, 단위 변환기 등 다양한 기능을 탭 형태로 분리하여 제공합니다.</li>
+                <li>각각의 탭별 프롬프트 최적화를 통해 재사용성을 높이고, LLM 호출 비용을 절감하였습니다.</li>
               </ul>
             </li>
             <br />
-            <li><strong>4. Brain Trainer (두뇌트레이너)</strong>
+            <li><strong>3. Brain Trainer (두뇌트레이너)</strong>
               <ul>
                 <li>연령대별 기억력·집중력 향상을 위한 퀴즈 서비스로, 상식·산수·이야기 기억력·사자성어 등 다양한 유형의 문제를 제공합니다.</li>
                 <li>기존 DB 문제와 LLM 기반 문제를 혼합 운영하여 문제 다양성과 난이도 조절 기능을 구현하였습니다.</li>
@@ -471,6 +475,32 @@
                   </ul>
                 </li>
                 <li>생성 결과 및 처리 시간을 로그 파일로 저장하여 품질 모니터링 체계를 구축하였습니다.</li>
+                <li>운영 비용 최적화를 위해 퀴즈 생성시 DB에 저장된 문제와 신규 퀴즈를 적절한 비율로 섞어 출제되며 신규 문제는 다시 한번 DB와 중복 체크하여 저장 가능하도록 구현하였습니다.</li>
+              </ul>
+            </li>
+            <br />
+            <li><strong>4. Rumble Guide Chatbot</strong>
+              <ul>
+                <li>디지몬 슈퍼럼블 게임의 가이드를 위한 LLM 기반 챗봇으로, OpenAI API + LangChain + RAG + Chroma를 활용하여 캐릭터 정보, 공략, 추천 세팅 등의 질문에 실시간 대응합니다.</li>
+                <li>게임 내 공식 자료와 커뮤니티 정보를 수집·정제하여 Chroma 벡터DB에 저장하고, Retriever 최적화(top-k 조정 및 필터링)로 응답 품질을 높였습니다.</li>
+                <li>4단계 응답 검증 프로세스(질문 해석 → 검색 결과 매칭 → 응답 생성 → 포맷·정확도 검증)를 적용하여 잘못된 정보나 불완전한 답변을 최소화하고, 신뢰성 높은 답변을 제공합니다.</li>
+                <li>RAG 챗봇 외에 일반 채팅 시스템으로 React 기반 채팅 UI와 WebSocket 통신을 적용해 지연 없이 실시간 대화도 가능합니다.</li>
+              </ul>
+            </li>
+            <br />
+            <li><strong>5. Screen Translator (스크린 번역기)</strong>
+              <ul>
+                - 시연 링크 : <a href="https://lcoding.tistory.com/216">Screen Translator 시연 링크</a>
+                <li>PC 화면 위에 반투명 오버레이 창을 띄워 사용자가 지정한 영역의 텍스트를 실시간으로 인식(OCR)하고 번역하는 데스크톱 유틸리티입니다.</li>
+                <li>PyQt 기반의 UI와 Tesseract OCR 엔진을 내장하여 설치 없이 로컬 PC 환경에서 즉시 사용 가능하도록 구현하였습니다.</li>
+                <li>주요 기능:
+                  <ul>
+                    <li>오버레이 창 드래그·리사이즈 및 투명도 조절</li>
+                    <li>자동 언어 감지(langdetect) 및 대상 언어 선택</li>
+                    <li>감지된 원문 언어의 국가명 표시</li>
+                    <li>번역 결과 복사 버튼 제공</li>
+                  </ul>
+                </li>
               </ul>
             </li>
           </ul>
