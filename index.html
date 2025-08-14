@@ -349,7 +349,7 @@
           <ul>
             <li><strong>Python 기반 데이터 분석 및 머신러닝:</strong> Pandas, Numpy, Sklearn, Scipy 등 활용</li>
             <li><strong>딥러닝 실습 환경:</strong> Colab, Jupyter Notebook, TensorFlow, PyTorch (CUDA 최적화)</li>
-            <li><strong>LLM 모델 활용 및 실습:</strong> GPT를 이용한 한국어·다국어 모델 실서비스 적용</li>
+            <li><strong>LLM 모델 활용 및 실습:</strong> GPT를 이용한 한국어·다국어 모델 서비스 적용</li>
             <li><strong>RAG 및 LLM 경험:</strong> PDF, XLS, TXT 등 다양한 문서를 Chroma 벡터 DB로 벡터화하여 GPT API와 연동, Top-k 및 필터링 최적화</li>
             <li><strong>Prompt Engineering 경험:</strong> 퓨샷, Chunk 최적화, 멀티턴 컨텍스트 관리, 조건부 프롬프트 설계</li>
             <li><strong>LangChain 기반 문서 검색 및 웹 툴 통합:</strong> 웹 검색 및 QA 시스템 설계·구축</li>
@@ -361,7 +361,7 @@
           <br/>
           <strong>기타 실습 경험</strong>
           <ul>
-            <li>화자 분리 및 음성 인식 실습: Whisper / WhisperX, Pyannote.audio 기반 STT 및 다이어리제이션</li>
+            <li>화자 분리 및 음성 인식 실습: Whisper, Pyannote.audio 기반 STT 및 다이어리제이션</li>
             <li>다양한 오픈소스 LLM 모델 실험: KoBART, Kakao KANANA, SKT KoGPT2, LGAI-EXAONE 등 로컬·클라우드 환경 배포 테스트</li>
           </ul>
         </li>
@@ -430,7 +430,7 @@
             <li><a href="https://www.j-uni.com/" target="_blank">J-universe 사이트 바로가기</a></li>
           </ul>
           <p>
-            j_universe_AI는 LLM과 다양한 AI 기술을 활용하여 실생활의 다양한 문제를 해결하는 웹·데스크톱 애플리케이션 프로젝트 모음입니다. <br/>
+            j_universe_AI는 LLM과 다양한 AI 기술을 활용하여 실생활의 다양한 문제를 해결하는 웹·데스크톱 애플리케이션 프로젝트입니다. <br/>
             모든 프로젝트는 FastAPI 기반 백엔드와 React 기반 프론트엔드(데스크톱 앱의 경우 PyQt)로 구성되었으며, PostgreSQL DB, LangChain, 멀티에이전트 구조,
             하이브리드 번역 엔진 등을 핵심 기술로 적용하였습니다. <br/>
             서비스는 웹(PWA 지원)과 앱 그리고 로컬 PC 환경 모두에서 안정적으로 동작하도록 설계되었습니다.
@@ -536,16 +536,16 @@
       <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
         <div class="flex-grow-1">
           <h3 class="mb-0">Solution</h3>
-          <div class="subheading mb-3">LLM Fine-Tuning 없이 해결한 전략 3가지</div>
+          <div class="subheading mb-3">파라프레이즈(표현 다양성)</div>
           <ul>
             <li><strong>Few-shot Prompting:</strong> 다양한 예시 문장을 포함한 프롬프트 제공</li>
             <li><strong>Chunk 조정:</strong> chunk_size 및 chunk_overlap 최적화로 문맥 유지</li>
             <li><strong>Retriever 개선:</strong> Top-k 값 조정 및 relevance filter 적용</li>
           </ul>
-          <div class="subheading mb-3 mt-4">인프라 개선 전략</div>
+          <div class="subheading mb-3 mt-4">백엔드 인프라 한계 및 비용</div>
           <ul>
-            <li><strong>백엔드 이전:</strong> Render 무료 플랜에서 발생하던 성능/슬립 이슈를 해결하기 위해 Oracle Cloud Infrastructure(OCI)의 Compute 인스턴스로 직접 배포 전환</li>
-            <li><strong>배포 방식 개선:</strong> DevOps 파이프라인 대신 수동 `.zip` 빌드 및 SSH 기반 직접 배포 방식 채택 → 배포 시간 단축 및 문제 발생 시 디버깅 용이</li>
+            <li><strong>백엔드 이전:</strong> Render 무료 플랜에서 발생하던 성능/슬립 이슈를 해결하기 위해 Oracle Cloud Infrastructure(OCI)의 Compute 인스턴스로 직접 배포방식으로 전환</li>
+            <li><strong>배포 방식 개선:</strong> DevOps 파이프라인의 자동 빌드 -> 배포방식에서 로컬PC에서 수동 빌드 및 SSH 기반 직접 배포 방식으로 전환</li>
             <li><strong>도메인 연동 및 HTTPS 인증서 설정:</strong> Nginx 리버스 프록시 + Let's Encrypt 적용으로 사용자 도메인 환경에서도 안정적인 서비스 제공</li>
           </ul>
           <div class="subheading mb-3 mt-4">LLM 호출 비용 최적화 (두뇌트레이너)</div>
@@ -573,8 +573,8 @@
             <li><a href="https://nedrug.mfds.go.kr/" target="_blank">의약품 안전나라 사이트 바로가기</a></li>
           </ul>
           <p>
-            본 프로젝트는 <strong>전자정부 프레임워크 + Nexacro(넥사크로) + Thymeleaf</strong> 기반으로 구성된 정부 공공 시스템의 유지보수 업무를 담당한 사례입니다.
-            프론트엔드부터 백엔드, 서버 인프라까지 전반적인 시스템 개선 및 보안 강화 작업에 직접 참여하였습니다.
+            <strong>전자정부 프레임워크 + Nexacro(넥사크로) + Thymeleaf</strong>기반으로 구성된 공공기관 시스템의 유지보수 업무를 담당하였습니다.
+            프론트엔드부터 백엔드, 서버 인프라까지 전반적인 시스템 개선 및 보안 강화 작업에 참여하였습니다.
           </p>
         </div>
         <div class="flex-shrink-0"><span class="text-primary">Completed</span></div>
@@ -619,9 +619,10 @@
             <br />
             <li><strong>3. 장기추적시스템 고도화</strong> (서브 개발자)
               <ul>
+                <li><strong>기능 추가:</strong> 추가되는 업무에 따른 기능 추가</li>
                 <li><strong>DB 성능 개선:</strong> 인덱스 추가 및 쿼리 튜닝</li>
                 <li><strong>모듈화 작업:</strong> DAO/Service 분리 및 기능 리팩토링</li>
-                <li><strong>성과:</strong> 처리 속도 향상 및 유지보수 용이성 강화</li>
+                <li><strong>성과:</strong> 기능 추가, 처리 속도 향상 및 유지보수 용이성 강화</li>
               </ul>
             </li>
             <br />
@@ -654,8 +655,8 @@
             <li><a href="https://nedrug.mfds.go.kr/" target="_blank">의약품 안전나라 사이트 바로가기</a></li>
           </ul>
           <p>
-            본 프로젝트는 <strong>전자정부 프레임워크 + Nexacro(넥사크로) + Thymeleaf</strong> 기반으로 운영되는 공공 의약품 정보 시스템입니다.
-            유지보수 및 기능개선 개발자로 참여하였으며, 대용량 데이터 처리와 접근성 문제 해결 등 여러 현업 요구사항을 해결해 나갔습니다.
+            <strong>전자정부 프레임워크 + Nexacro(넥사크로) + Thymeleaf</strong>기반으로 구성된 공공기관 시스템입니다.
+            유지보수 및 기능개선 개발자로 참여하였으며, 대용량 데이터 처리와 웹접근성 문제 해결 등 여러 현업 요구사항을 해결해 나갔습니다.
           </p>
         </div>
       </div>
@@ -676,7 +677,7 @@
             <br />
             <li><strong>2. 시각 장애인을 위한 모바일 접근성 개선 요구</strong>
               <ul>
-                <li>모바일에서 웹사이트 바로가기를 생성하고 접속 시 <strong>카메라 화면에서 바코드 인식</strong> 기능 제공 필요</li>
+                <li>모바일에서 기존 웹사이트의 바로가기를 생성하고 접속 시 <strong>카메라 화면에서 바코드 인식</strong> 기능 제공 필요</li>
                 <li><strong>ActiveX 폐지</strong>로 인해 기존처럼 사용자 동의 없이 바로가기 생성 불가능</li>
               </ul>
             </li>
@@ -693,9 +694,9 @@
           <ul>
             <li><strong>1. 서버 부하 및 컨테이너 다운 문제 해결</strong>
               <ul>
-                <li><strong>View 캐싱 도입:</strong> 특정 URL 진입 시 <code>Filter</code>를 통해 <strong>ContentCachingResponseWrapper</strong>로 HTML 렌더링 결과를 저장</li>
+                <li><strong>View 캐싱 도입:</strong> 특정 URL 진입 시 interceptor 및 Filter를 통해 <strong>ContentCachingResponseWrapper</strong>로 HTML 렌더링 결과를 저장</li>
                 <li><strong>파일 캐시화 전략:</strong> WAS 내 정적 경로에 HTML 파일을 저장하고, 동일 요청 시 캐시 파일을 응답</li>
-                <li><strong>효과:</strong> 데이터가 변경되지 않을 경우 <strong>즉시 응답</strong> 가능 → <strong>응답 속도 향상</strong> 및 <strong>서버 부하 감소</strong></li>
+                <li><strong>효과:</strong> 캐시 파일 생성 후 데이터가 변경되지 않을 경우 <strong>즉시 응답</strong> 가능 → <strong>응답 속도 향상</strong> 및 <strong>서버 부하 감소</strong></li>
               </ul>
             </li>
             <br />
@@ -721,7 +722,7 @@
           <h3 class="mb-0">Result</h3>
           <div class="subheading mb-3">개선 성과</div>
           <ul>
-            <li><strong>서버 안정화:</strong> View 캐싱으로 <strong>응답 속도 최대 80% 단축</strong> 및 <strong>컨테이너 다운 방지</strong></li>
+            <li><strong>서버 안정화:</strong> View 캐싱으로 <strong>응답 속도 최대 80%까지 단축</strong> 및 <strong>컨테이너 다운 방지</strong></li>
             <li><strong>접근성 향상:</strong> 상위 기관의 요구사항 충족 및 <strong>시각 장애인을 위한 UX 강화</strong></li>
             <li><strong>모바일 UX 개선:</strong> 바로가기 아이콘 + 카메라 기능을 통해 <strong>PWA 기반 사용자 경험 개선</strong></li>
           </ul>
